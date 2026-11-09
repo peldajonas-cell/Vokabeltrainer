@@ -21,7 +21,7 @@ river ; der Fluss ; The river is very wide here. ; Der Fluss ist hier sehr breit
 by the river ; am Fluss ; We had a picnic by the river. ; Wir haben am Fluss gepicknickt.
 exciting ; aufregend ; The last minutes of the game were really exciting. ; Die letzten Minuten des Spiels waren richtig aufregend.
 scary ; unheimlich, gruselig ; This film is too scary for my little sister. ; Dieser Film ist zu gruselig für meine kleine Schwester.
-when ; als (zeitlich) ; When I was eight, I learned to swim. ; Als ich acht war, habe ich schwimmen gelernt.
+when ; als (zeitlich), wann, wenn ; When I was eight, I learned to swim. ; Als ich acht war, habe ich schwimmen gelernt.
 ghost ; der Geist, das Gespenst ; Some people say there is a ghost in the castle. ; Manche Leute sagen, dass es im Schloss ein Gespenst gibt.
 night ; die Nacht ; I couldn't sleep last night. ; Ich konnte letzte Nacht nicht schlafen.
 dark ; dunkel ; In winter it gets dark very early. ; Im Winter wird es sehr früh dunkel.
@@ -35,6 +35,23 @@ to touch ; anfassen, berühren ; Please don't touch my phone. ; Bitte fass mein 
 out ; heraus, hinaus, nach draußen ; The cat wants to go out. ; Die Katze will nach draußen.
 past ; vergangene(r, s) ; In the past few days it rained a lot. ; In den vergangenen Tagen hat es viel geregnet.
 blind ; blind ; Her grandfather is blind, so he has a guide dog. ; Ihr Großvater ist blind, deshalb hat er einen Blindenhund.
+capital letter ; der Großbuchstabe ; Names start with a capital letter. ; Namen beginnen mit einem Großbuchstaben.
+to agree on ; sich einigen auf ; We couldn't agree on a film. ; Wir konnten uns nicht auf einen Film einigen.
+to correct ; korrigieren ; The teacher will correct our tests this week. ; Die Lehrerin korrigiert diese Woche unsere Tests.
+boring ; langweilig ; The museum was boring at first. ; Das Museum war am Anfang langweilig.
+ghost tour ; die Geistertour ; We went on a ghost tour in Edinburgh. ; Wir haben in Edinburgh eine Geistertour gemacht.
+in the morning ; morgens, am Morgen ; I always have a shower in the morning. ; Ich dusche immer morgens.
+in the afternoon ; nachmittags, am Nachmittag ; We have football practice in the afternoon. ; Wir haben nachmittags Fußballtraining.
+in the evening ; abends, am Abend ; My parents watch the news in the evening. ; Meine Eltern schauen abends die Nachrichten.
+at night ; nachts, in der Nacht ; Owls hunt at night. ; Eulen jagen nachts.
+on Monday ; am Montag ; We have a test on Monday. ; Wir schreiben am Montag einen Test.
+on Mondays ; montags ; The library is closed on Mondays. ; Die Bücherei ist montags geschlossen.
+darkness ; die Dunkelheit ; The dog was afraid of the darkness. ; Der Hund hatte Angst vor der Dunkelheit.
+in the dark ; im Dunkeln ; I can't find my keys in the dark. ; Ich kann meine Schlüssel im Dunkeln nicht finden.
+the underground ; die U-Bahn ; We took the underground to the museum. ; Wir sind mit der U-Bahn zum Museum gefahren.
+ago ; vor (zeitlich) ; The film started ten minutes ago. ; Der Film hat vor zehn Minuten angefangen.
+that ; das (dort), der/die/das, dass ; I think that we are late. ; Ich glaube, dass wir zu spät sind.
+the past ; die Vergangenheit ; In the past, there were no smartphones. ; In der Vergangenheit gab es keine Smartphones.
 
 # Lektion: Lighthouse 1 – S. 214–215
 through ; durch ; The train goes through a long tunnel. ; Der Zug fährt durch einen langen Tunnel.
@@ -63,7 +80,18 @@ rainbow ; der Regenbogen ; After the rain we saw a rainbow. ; Nach dem Regen sah
 even ; sogar, selbst ; Even my dad laughed at the joke. ; Sogar mein Vater hat über den Witz gelacht.
 girlfriend ; die (feste) Freundin ; His girlfriend plays in the same team. ; Seine Freundin spielt im selben Team.
 area ; die Gegend, der Bereich ; There are a lot of farms in this area. ; In dieser Gegend gibt es viele Bauernhöfe.
-child ; das Kind ; Every child gets a free drink. ; Jedes Kind bekommt ein kostenloses Getränk.
+child / kid ; das Kind ; Every child gets a free drink. ; Jedes Kind bekommt ein kostenloses Getränk.
 children ; die Kinder ; The children are playing in the park. ; Die Kinder spielen im Park.
 concert ; das Konzert ; We went to a rock concert last weekend. ; Wir waren letztes Wochenende auf einem Rockkonzert.
 musician ; der Musiker, die Musikerin ; My uncle is a musician and plays the drums. ; Mein Onkel ist Musiker und spielt Schlagzeug.
+parade ; die Parade, der Umzug ; The parade goes through the whole town. ; Der Umzug geht durch die ganze Stadt.
+ten thousand ; zehntausend ; Ten thousand fans were in the stadium. ; Zehntausend Fans waren im Stadion.
+to decorate ; dekorieren, schmücken ; Let's decorate the classroom for the party. ; Lass uns das Klassenzimmer für die Party schmücken.
+to arrive ; ankommen ; When does the bus arrive? ; Wann kommt der Bus an?
+single ticket / one-way ticket ; die einfache Fahrkarte ; A single ticket costs five pounds. ; Eine einfache Fahrkarte kostet fünf Pfund.
+to return ; zurückkehren, zurückkommen ; We return home on Sunday. ; Wir kehren am Sonntag nach Hause zurück.
+I went ; ich ging, ich bin gegangen ; I went to the cinema with my cousin. ; Ich bin mit meinem Cousin ins Kino gegangen.
+even if ; selbst wenn ; I'll go out, even if it rains. ; Ich gehe raus, selbst wenn es regnet.
+not even ; nicht einmal ; She didn't even say hello. ; Sie hat nicht einmal Hallo gesagt.
+boyfriend ; der (feste) Freund ; Her boyfriend lives in the next village. ; Ihr Freund wohnt im nächsten Dorf.
+street musician ; der Straßenmusiker, die Straßenmusikerin ; A street musician played the guitar outside the station. ; Ein Straßenmusiker spielte vor dem Bahnhof Gitarre.
