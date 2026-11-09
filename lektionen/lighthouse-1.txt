@@ -92,6 +92,6 @@ single ticket / one-way ticket ; die einfache Fahrkarte ; A single ticket costs 
 to return ; zurückkehren, zurückkommen ; We return home on Sunday. ; Wir kehren am Sonntag nach Hause zurück.
 I went ; ich ging, ich bin gegangen ; I went to the cinema with my cousin. ; Ich bin mit meinem Cousin ins Kino gegangen.
 even if ; selbst wenn ; I'll go out, even if it rains. ; Ich gehe raus, selbst wenn es regnet.
-not even ; nicht einmal ; She didn't even say hello. ; Sie hat nicht einmal Hallo gesagt.
+not even ; nicht einmal ; She did not even say hello. ; Sie hat nicht einmal Hallo gesagt.
 boyfriend ; der (feste) Freund ; Her boyfriend lives in the next village. ; Ihr Freund wohnt im nächsten Dorf.
 street musician ; der Straßenmusiker, die Straßenmusikerin ; A street musician played the guitar outside the station. ; Ein Straßenmusiker spielte vor dem Bahnhof Gitarre.
