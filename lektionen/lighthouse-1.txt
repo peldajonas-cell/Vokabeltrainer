@@ -30,7 +30,7 @@ costume ; das Kostüm, die Verkleidung ; What costume are you wearing at the par
 underground ; unterirdisch, unter der Erde ; There is an underground car park next to the station. ; Neben dem Bahnhof gibt es ein unterirdisches Parkhaus.
 a long time ago ; vor langer Zeit ; A long time ago, people lived in caves. ; Vor langer Zeit lebten Menschen in Höhlen.
 to scream ; schreien ; The kids scream on the roller coaster. ; Die Kinder schreien auf der Achterbahn.
-he thought that ; er dachte, dass ; He thought that the shop was open. ; Er dachte, dass der Laden geöffnet war.
+he thought that ; er dachte, dass ; He thought that the shop was open. ; Er dachte, dass der Laden geöffnet war. ; think - thought - thought
 to touch ; anfassen, berühren ; Please don't touch my phone. ; Bitte fass mein Handy nicht an.
 out ; heraus, hinaus, nach draußen ; The cat wants to go out. ; Die Katze will nach draußen.
 past ; vergangene(r, s) ; In the past few days it rained a lot. ; In den vergangenen Tagen hat es viel geregnet.
@@ -90,7 +90,7 @@ to decorate ; dekorieren, schmücken ; Let's decorate the classroom for the part
 to arrive ; ankommen ; When does the bus arrive? ; Wann kommt der Bus an?
 single ticket / one-way ticket ; die einfache Fahrkarte ; A single ticket costs five pounds. ; Eine einfache Fahrkarte kostet fünf Pfund.
 to return ; zurückkehren, zurückkommen ; We return home on Sunday. ; Wir kehren am Sonntag nach Hause zurück.
-I went ; ich ging, ich bin gegangen ; I went to the cinema with my cousin. ; Ich bin mit meinem Cousin ins Kino gegangen.
+I went ; ich ging, ich bin gegangen ; I went to the cinema with my cousin. ; Ich bin mit meinem Cousin ins Kino gegangen. ; go - went - gone
 even if ; selbst wenn ; I'll go out, even if it rains. ; Ich gehe raus, selbst wenn es regnet.
 not even ; nicht einmal ; She did not even say hello. ; Sie hat nicht einmal Hallo gesagt.
 boyfriend ; der (feste) Freund ; Her boyfriend lives in the next village. ; Ihr Freund wohnt im nächsten Dorf.

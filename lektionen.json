@@ -227,7 +227,12 @@
      "en": "he thought that",
      "de": "er dachte, dass",
      "sEn": "He thought that the shop was open.",
-     "sDe": "Er dachte, dass der Laden geöffnet war."
+     "sDe": "Er dachte, dass der Laden geöffnet war.",
+     "forms": [
+      "think",
+      "thought",
+      "thought"
+     ]
     },
     {
      "id": "lighthouse-1-s-212-213--to-touch",
@@ -639,7 +644,12 @@
      "en": "I went",
      "de": "ich ging, ich bin gegangen",
      "sEn": "I went to the cinema with my cousin.",
-     "sDe": "Ich bin mit meinem Cousin ins Kino gegangen."
+     "sDe": "Ich bin mit meinem Cousin ins Kino gegangen.",
+     "forms": [
+      "go",
+      "went",
+      "gone"
+     ]
     },
     {
      "id": "lighthouse-1-s-214-215--even-if",

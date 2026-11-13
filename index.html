@@ -13,7 +13,7 @@
 <body>
 <title>Wortkasten</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<!-- BAUSTAND: [x] 1 Lektionen aus lektionen.json + Import mit Vorschau | [ ] 2 Verb-Modus | [ ] 3 Fotos senden | [ ] 4 GitHub-Pages-Paket + Anleitung -->
+<!-- BAUSTAND: [x] 1 Lektionen aus lektionen.json + Import mit Vorschau | [x] 2 Verb-Modus | [ ] 3 Fotos senden | [ ] 4 GitHub-Pages-Paket + Anleitung -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
 <style>
@@ -37,6 +37,7 @@
   --accent:#7ea3ff; --accent-ink:#0d1526; --accent-soft:#1f2b47; --hl:#ffd84d; --hl-ink:#3a2f00;
   --ok:#4fc77f; --ok-soft:#173326; --bad:#ff7a80; --bad-soft:#3a1d21;
   --b0:#3a4350; --b1:#e2575d; --b2:#ef9548; --b3:#e5c443; --b4:#86c96c; --b5:#3eaf6b; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
 html,body{background:var(--bg);color:var(--ink)}
 body{font-family:var(--f-body);font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px 48px;display:flex;flex-direction:column;gap:18px}
@@ -170,7 +171,8 @@ const MODES = [
   {id:"tippen",   name:"Eintippen",         dir:"Deutsch → Englisch", group:"schwer"},
   {id:"hoeren",   name:"Hören & Schreiben", dir:"Hören → Englisch",   group:"schwer", needs:"tts"},
   {id:"luecke",   name:"Lückensatz",        dir:"Deutsch → Englisch", group:"schwer", needs:"luecke"},
-  {id:"satzbau",  name:"Satzbau",           dir:"Deutsch → Englisch", group:"schwer", needs:"satz"}
+  {id:"satzbau",  name:"Satzbau",           dir:"Deutsch → Englisch", group:"schwer", needs:"satz"},
+  {id:"formen",   name:"Formen eintippen",  dir:"Grundform → Past-Formen", group:"schwer", needs:"forms"}
 ];
 const MODE = Object.fromEntries(MODES.map(m=>[m.id,m]));
 const LIGHT = ["karte","mc","paare"];
@@ -187,6 +189,7 @@ const esc = s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt
 const shuffle = a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const alts = en=>String(en).split("/").map(s=>s.trim()).filter(Boolean);
 const norm = s=>String(s).toLowerCase().replace(/[’`´]/g,"'").replace(/[.,!?;:"„“”()]/g," ").replace(/\s+/g," ").trim();
+const splitForms = t=>String(t||"").split(/\s*[–-]\s*/).map(x=>x.trim()).filter(Boolean);
 const escRe = s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 function lev(a,b){const m=a.length,n=b.length;const d=Array.from({length:m+1},(_,i)=>[i]);for(let j=1;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
 
@@ -224,6 +227,7 @@ function available(w,mid){
   if(n==="satz") return hasSentence(w);
   if(n==="luecke") return !!findTarget(w);
   if(n==="tts") return hasTTS;
+  if(n==="forms") return Array.isArray(w.forms)&&w.forms.length>=3;
   return true;
 }
 const P = (wid,mid)=>(S.prog[wid]&&S.prog[wid][mid])||{box:0,due:0,r:0,f:0};
@@ -388,6 +392,12 @@ function check(){
     const got=c.built.map(i=>c.target[i]).join(" ");
     answer(got===c.target.join(" "),{given:got}); return;
   }
+  if(it.m==="formen"){
+    const a=document.getElementById("ans1"),b=document.getElementById("ans2");
+    if(!a.value.trim()){a.focus();return} if(!b.value.trim()){b.focus();return}
+    const r1=checkTyped(a.value,w.forms[1].split("/")),r2=checkTyped(b.value,w.forms[2].split("/"));
+    answer(r1.ok&&r2.ok,{g1:a.value,g2:b.value,near:!(r1.ok&&r2.ok)&&(r1.ok||r1.near)&&(r2.ok||r2.near)}); return;
+  }
   const el=document.getElementById("ans"); const v=el?el.value:"";
   if(!v.trim()){if(el)el.focus();return}
   const targets=it.m==="luecke"?[s.cur.t.text]:alts(w.en);
@@ -518,6 +528,16 @@ function vLearn(){
       const gapTxt=done?esc(t.text):esc(t.text[0])+"…";
       body=`<div class="sent">${esc(a)}<span class="gap">${gapTxt}</span>${esc(b)}</div><p class="hint">${esc(w.sDe)}</p>${typeForm(done)}`;
       break;}
+    case "formen":{
+      const r=s.res||{};
+      body=`<div class="row"><div class="prompt">${esc(w.forms[0])}</div>${sayBtn(w.forms[0])}</div>
+        <p class="hint">${esc(w.en)} = ${esc(w.de)}<br>Schreib die beiden anderen Formen.</p>
+        <form data-form="ans" class="stack">
+          <label class="f">Simple Past<input id="ans1" class="ans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="next" ${done?"disabled":""} value="${done?esc(r.g1||""):""}"></label>
+          <label class="f">Past Participle<input id="ans2" class="ans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" ${done?"disabled":""} value="${done?esc(r.g2||""):""}"></label>
+          ${done?"":`<button class="btn primary wide" type="submit">Prüfen</button>`}
+        </form>`;
+      break;}
     case "satzbau":
       body=`<div class="sent" style="font-weight:700">${esc(w.sDe)}</div><p class="hint">Bau den Satz auf Englisch. Tippe die Wörter in der richtigen Reihenfolge an.</p>
         <div class="built">${c.built.map((ix,k)=>`<button class="tile" data-act="untile" data-k="${k}" ${done?"disabled":""}>${esc(c.target[ix])}</button>`).join("")||`<span class="muted small">Hier entsteht dein Satz</span>`}</div>
@@ -559,6 +579,7 @@ function feedback(){
     if(it.m==="mc") solution=w.de;
     else if(it.m==="verstehen") solution=w.sDe;
     else if(it.m==="satzbau"||it.m==="luecke") solution=w.sEn;
+    else if(it.m==="formen") solution=w.forms.join(" – ");
     else solution=alts(w.en)[0];
   }
   const boxTxt=r.free?(it.retry?"Wiederholung zählt nicht für die Fächer.":"Freies Üben – Fächer bleiben gleich.")
@@ -568,11 +589,12 @@ function feedback(){
       <b class="t">${r.ok?"Richtig!":r.near?"Knapp daneben":"Leider falsch"}</b>
       ${r.ok?"":`<span>Richtig ist: <b>${esc(solution)}</b></span>`}
       ${r.near?`<span>Achte auf die Schreibweise.</span>`:""}
+      ${r.ok&&it.m==="formen"?`<span>${esc(w.forms.join(" – "))}</span>`:""}
       ${r.ok&&(it.m==="tippen"||it.m==="hoeren")?`<span>${esc(w.en)} = ${esc(w.de)}</span>`:""}
       ${ctx}
       <span class="small muted">${boxTxt}</span>
     </div>
-    <div class="row">${sayBtn(it.m==="satzbau"||it.m==="luecke"||it.m==="verstehen"?w.sEn:w.en)}<button class="btn primary" style="flex:1" id="next" data-act="next">Weiter</button></div>`;
+    <div class="row">${sayBtn(it.m==="formen"?w.forms.join(", "):it.m==="satzbau"||it.m==="luecke"||it.m==="verstehen"?w.sEn:w.en)}<button class="btn primary" style="flex:1" id="next" data-act="next">Weiter</button></div>`;
 }
 
 function vDone(){
@@ -595,7 +617,7 @@ function vPractice(){
       <option value="all" ${p.lesson==="all"?"selected":""}>Alle Lektionen</option>
       ${opts.map(l=>`<option value="${l.id}" ${p.lesson===l.id?"selected":""}>${esc(l.name)}</option>`).join("")}</select></label>
     <div class="eyebrow">Lernmodus</div>
-    <div class="row">${[{id:"mix",name:"Gemischt"}].concat(MODES.filter(m=>m.needs!=="tts"||hasTTS)).map(m=>`<button class="tab ${p.mode===m.id?"on":""}" data-act="pr-mode" data-m="${m.id}">${esc(m.name)}</button>`).join("")}</div>
+    <div class="row">${[{id:"mix",name:"Gemischt"}].concat(MODES.filter(m=>(m.needs!=="tts"||hasTTS)&&(m.needs!=="forms"||S.words.some(w=>available(w,"formen"))))).map(m=>`<button class="tab ${p.mode===m.id?"on":""}" data-act="pr-mode" data-m="${m.id}">${esc(m.name)}</button>`).join("")}</div>
     <button class="btn primary wide" data-act="start-practice">Üben starten</button>
   </section>`;
 }
@@ -701,6 +723,7 @@ function editForm(w){
     <div class="grid2"><label class="f">Englisch<input id="ed-en" class="in" value="${esc(w.en)}"></label><label class="f">Deutsch<input id="ed-de" class="in" value="${esc(w.de)}"></label></div>
     <label class="f">Satz Englisch<input id="ed-sen" class="in" value="${esc(w.sEn)}"></label>
     <label class="f">Satz Deutsch<input id="ed-sde" class="in" value="${esc(w.sDe)}"></label>
+    <label class="f">Verbformen (nur unregelmäßige Verben)<input id="ed-forms" class="in" autocapitalize="off" autocorrect="off" value="${esc((w.forms||[]).join(" - "))}" placeholder="z. B. go - went - gone"></label>
     <label class="f">Lektion<select id="ed-lesson" class="in">${S.lessons.map(l=>`<option value="${l.id}" ${w.lesson===l.id?"selected":""}>${esc(l.name)}</option>`).join("")}</select></label>
     <p class="small muted">Mehrere richtige englische Antworten mit „/“ trennen, z. B. „big / large“.</p>
     <div class="row"><button class="btn primary" data-act="ed-save">Speichern</button><button class="btn" data-act="ed-cancel">Abbrechen</button>
@@ -727,7 +750,7 @@ function pAdd(){
     <label class="f">Lektion (für Zeilen ohne eigene Überschrift)<select id="im-lesson" class="in" data-change="im-lesson">${S.lessons.map(l=>`<option value="${l.id}" ${sel===l.id?"selected":""}>${esc(l.name)}</option>`).join("")}<option value="__new" ${sel==="__new"?"selected":""}>+ Neue Lektion…</option></select></label>
     ${sel==="__new"?`<label class="f">Name der neuen Lektion<input id="im-name" class="in" data-input="im-name" value="${esc(ui.importName)}" placeholder="z. B. Lighthouse 1 – S. 216–217"></label>`:""}
     <label class="f">Liste<textarea id="im-text" class="in" data-input="im-text" placeholder="# Lektion: Lighthouse 1 – S. 216–217&#10;to borrow ; (sich) ausleihen ; Can I borrow your pen? ; Kann ich mir deinen Stift ausleihen?&#10;reliable ; zuverlässig">${esc(ui.importText)}</textarea></label>
-    <p class="small muted">Pro Zeile eine Vokabel: <b>Englisch ; Deutsch ; Satz Englisch ; Satz Deutsch</b>. Die Sätze sind freiwillig, schalten aber die Satzmodi frei. Eine Zeile <b># Lektion: Name</b> startet eine eigene Lektion. Mehrere richtige Antworten mit „/“ trennen.</p>
+    <p class="small muted">Pro Zeile eine Vokabel: <b>Englisch ; Deutsch ; Satz Englisch ; Satz Deutsch</b>. Die Sätze sind freiwillig, schalten aber die Satzmodi frei. Eine Zeile <b># Lektion: Name</b> startet eine eigene Lektion. Mehrere richtige Antworten mit „/“ trennen. Bei unregelmäßigen Verben als 5. Spalte die Formen: <b>go - went - gone</b>.</p>
     <div class="row"><span id="im-count" class="muted small">${countLabel()}</span><button class="btn primary" style="margin-left:auto" data-act="preview">Vorschau</button></div>
   </section>
   <section class="card"><h3>Lektionen</h3>
@@ -766,7 +789,7 @@ function parseBlocks(txt){
     const h=l.match(/^#+\s*(?:Lektion\s*:)?\s*(.+)$/i);
     if(h){blocks.push(cur);cur={name:h[1].trim(),items:[]};return}
     const p=(l.includes("\t")?l.split("\t"):l.split(";")).map(x=>x.trim());
-    if(p[0]&&p[1]) cur.items.push({en:p[0],de:p[1],sEn:p[2]||"",sDe:p[3]||""});
+    if(p[0]&&p[1]){const it={en:p[0],de:p[1],sEn:p[2]||"",sDe:p[3]||""};const fm=splitForms(p[4]);if(fm.length>=3)it.forms=fm.slice(0,3);cur.items.push(it)}
   });
   blocks.push(cur);
   return blocks.filter(b=>b.items.length);
@@ -796,7 +819,7 @@ function render(){
   document.getElementById("app").innerHTML=`<div class="wrap">${h}</div>`+(ui.toast?`<div class="toast" role="status">${esc(ui.toast)}</div>`:"");
   if(ui.view==="learn"){
     const s=ui.sess;
-    if(s.state==="ask"){const a=document.getElementById("ans");if(a)a.focus({preventScroll:true})}
+    if(s.state==="ask"){const a=document.getElementById("ans")||document.getElementById("ans1");if(a)a.focus({preventScroll:true})}
     else{const n=document.getElementById("next");if(n)n.focus({preventScroll:true})}
   }
 }
@@ -860,6 +883,7 @@ document.addEventListener("click",e=>{
       const w=wordById(ui.editId); const v=id=>document.getElementById(id).value.trim();
       if(!v("ed-en")||!v("ed-de")){toast("Englisch und Deutsch dürfen nicht leer sein.");break}
       Object.assign(w,{en:v("ed-en"),de:v("ed-de"),sEn:v("ed-sen"),sDe:v("ed-sde"),lesson:document.getElementById("ed-lesson").value,edited:true});
+      {const fm=splitForms(v("ed-forms"));if(fm.length>=3)w.forms=fm.slice(0,3);else delete w.forms}
       ui.editId=null; save(); toast("Gespeichert"); break;
     }
     case "ed-del": {
@@ -947,6 +971,7 @@ document.addEventListener("submit",e=>{
   }
 });
 document.addEventListener("keydown",e=>{
+  if(e.key==="Enter"&&e.target.id==="ans1"){e.preventDefault();const b=document.getElementById("ans2");if(b)b.focus();return}
   if(ui.view==="learn"&&ui.sess&&ui.sess.state==="done"&&e.key==="Enter"&&e.target.tagName!=="BUTTON"){e.preventDefault();next();return}
   if(ui.view==="lock"){if(/^[0-9]$/.test(e.key))pinDigit(e.key);else if(e.key==="Backspace"){ui.pin=ui.pin.slice(0,-1);render()}}
 });
