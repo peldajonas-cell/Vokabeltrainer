@@ -1,6 +1,6 @@
 <title>Wortkasten</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<!-- BAUSTAND: [x] 1 Lektionen aus lektionen.json + Import mit Vorschau | [x] 2 Verb-Modus | [ ] 3 Fotos senden | [ ] 4 GitHub-Pages-Paket + Anleitung -->
+<!-- BAUSTAND: [x] 1 Lektionen aus lektionen.json + Import mit Vorschau | [x] 2 Verb-Modus | [x] 3 Fotos senden | [ ] 4 GitHub-Pages-Paket + Anleitung -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
 <style>
@@ -138,6 +138,14 @@ textarea.in{min-height:140px;resize:vertical;font-size:15px}
 .warn{background:var(--bad-soft);color:var(--bad);border-radius:12px;padding:10px 14px;font-size:14px}
 details summary{cursor:pointer;font-weight:700}
 .news{border:2px solid var(--hl)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:600px){.grid3{grid-template-columns:1fr}}
+.vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+label.btn{user-select:none;-webkit-user-select:none}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.thumb{position:relative;margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--surface2);aspect-ratio:3/4;max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .icon{position:absolute;top:6px;right:6px;width:36px;height:36px;background:var(--surface)}
 .pv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:10px 0;border-top:1px solid var(--line);cursor:pointer}
 .pv input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--accent)}
 .pv .vw>span{display:block}
@@ -194,7 +202,7 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){storage
 
 let S = load();
 let ui = {view:"home",ptab:"ueberblick",pin:"",pinFirst:null,pinMode:"enter",pinErr:false,
-  lessonFilter:"all",editId:null,confirm:null,sess:null,toast:null,practice:{lesson:"all",mode:"mix"},importLesson:null,importText:"",importName:"",preview:null,news:[]};
+  lessonFilter:"all",editId:null,confirm:null,sess:null,toast:null,practice:{lesson:"all",mode:"mix"},photos:[],photoSent:false,photoErr:false,importLesson:null,importText:"",importName:"",preview:null,news:[]};
 
 /* ---------- model ---------- */
 const wordById = id=>S.words.find(w=>w.id===id);
@@ -426,9 +434,10 @@ function vHome(){
     <p class="muted">${empty?"Neue Lektionen erscheinen hier automatisch, sobald sie bereitstehen.":`${st?`${st} ${st===1?"Tag":"Tage"} in Folge gelernt.`:"Starte heute deine Lernserie."} ${due?"":"Morgen kommen neue Wörter dran."}`}</p>
     <button class="btn primary wide" data-act="start" ${due?"":"disabled"}>Los geht’s</button>
   </section>
-  <div class="grid2">
+  <div class="grid3">
     <button class="btn tile-btn" data-act="go" data-v="practice">Gezielt üben<span>Lektion und Lernmodus selbst wählen</span></button>
     <button class="btn tile-btn" data-act="go" data-v="own">Meine Wörter<span>Eigene Vokabeln hinzufügen</span></button>
+    <button class="btn tile-btn" data-act="go" data-v="fotos">Vokabeln fotografieren<span>${ui.photos.length?`${ui.photos.length} ${ui.photos.length===1?"Foto":"Fotos"} bereit zum Senden`:"Buchseiten an deine Eltern schicken"}</span></button>
   </div>
   <section class="card">
     <h2>Lektionen</h2>
@@ -634,6 +643,40 @@ function vOwn(){
   </section>`;
 }
 
+function vFotos(){
+  const ph=ui.photos, n=ph.length;
+  return `<header class="top"><button class="btn ghost" data-act="go" data-v="home">← Zurück</button></header>
+  <h1>Vokabeln fotografieren</h1>
+  <p class="muted">Fotografiere die Vokabelseiten aus deinem Buch und schick sie an deine Eltern. Die neuen Wörter erscheinen danach automatisch hier in der App.</p>
+  ${ui.photoSent?`<div class="fb ok"><b class="t">Fotos verschickt</b><span>Sobald die Lektion fertig ist, siehst du sie auf der Startseite.</span></div>`:""}
+  <section class="card">
+    <div class="grid2">
+      <label class="btn primary" for="ph-cam">Foto aufnehmen</label>
+      <label class="btn" for="ph-lib">Aus Fotos wählen</label>
+    </div>
+    <input id="ph-cam" class="vh" type="file" accept="image/*" capture="environment" data-change="photos" tabindex="-1">
+    <input id="ph-lib" class="vh" type="file" accept="image/*" multiple data-change="photos" tabindex="-1">
+    <p class="small muted">Tipp: Fotografiere gerade von oben und bei gutem Licht. Screenshots aus dem digitalen Buch gehen auch, die findest du unter „Aus Fotos wählen“.</p>
+    ${n?`<div class="thumbs">${ph.map((x,i)=>`<figure class="thumb"><img src="${x.url}" alt="Foto ${i+1}"><button class="icon" data-act="ph-del" data-i="${i}" aria-label="Foto ${i+1} entfernen"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></figure>`).join("")}</div>`:""}
+  </section>
+  ${ui.photoErr?`<div class="warn">Direktes Senden geht hier nicht. Öffne die App über das Icon auf dem Home-Bildschirm, oder schick die Fotos selbst aus der Fotos-App über Nachrichten.</div>`:""}
+  <button class="btn primary wide" data-act="ph-send" ${n?"":"disabled"}>${n?`An Eltern senden (${n} ${n===1?"Foto":"Fotos"})`:"Erst Fotos hinzufügen"}</button>
+  ${n?`<p class="small muted">Im Teilen-Menü wählst du deine Eltern bei Nachrichten oder AirDrop aus.</p>`:""}`;
+}
+async function sendPhotos(){
+  const files=ui.photos.map(x=>x.file);
+  try{
+    if(!navigator.canShare||!navigator.canShare({files})) throw {name:"NotSupported"};
+    await navigator.share({files,title:"Vokabelfotos"});
+    ui.photos.forEach(x=>{try{URL.revokeObjectURL(x.url)}catch(e){}});
+    ui.photos=[]; ui.photoSent=true; ui.photoErr=false;
+  }catch(e){
+    if(e&&e.name==="AbortError") return;
+    ui.photoErr=true;
+  }
+  if(ui.view==="fotos") render();
+}
+
 function vLock(){
   const setting=ui.pinMode!=="enter";
   const title=ui.pinMode==="enter"?"PIN eingeben":ui.pinFirst?"PIN noch einmal eingeben":"Neue PIN festlegen";
@@ -801,6 +844,7 @@ function render(){
   else if(ui.view==="done")h=vDone();
   else if(ui.view==="practice")h=vPractice();
   else if(ui.view==="own")h=vOwn();
+  else if(ui.view==="fotos")h=vFotos();
   else if(ui.view==="lock")h=vLock();
   else if(ui.view==="parent")h=vParent();
   document.getElementById("app").innerHTML=`<div class="wrap">${h}</div>`+(ui.toast?`<div class="toast" role="status">${esc(ui.toast)}</div>`:"");
@@ -909,6 +953,8 @@ document.addEventListener("click",e=>{
       toast(n?`${n} Vokabeln übernommen`:"Nichts übernommen"); break;
     }
     case "news-ok": ui.news=[]; render(); break;
+    case "ph-send": ui.photoErr=false; sendPhotos(); break;
+    case "ph-del": { const x=ui.photos.splice(+b.dataset.i,1)[0]; if(x)try{URL.revokeObjectURL(x.url)}catch(err){} render(); break; }
     case "del-lesson": {
       const id=b.dataset.id;
       if(ui.confirm==="l:"+id){if(!S.removed.includes(id))S.removed.push(id);S.words.filter(w=>w.lesson===id).forEach(w=>delete S.prog[w.id]);S.words=S.words.filter(w=>w.lesson!==id);S.lessons=S.lessons.filter(l=>l.id!==id);
@@ -938,6 +984,13 @@ document.addEventListener("click",e=>{
 document.addEventListener("change",e=>{
   const k=e.target.dataset.change; if(!k) return;
   if(k==="pr-lesson") ui.practice.lesson=e.target.value;
+  if(k==="photos"){
+    const fs=[...(e.target.files||[])].filter(f=>/^image\//.test(f.type)||/\.(heic|heif|jpe?g|png)$/i.test(f.name));
+    const room=Math.max(0,12-ui.photos.length);
+    fs.slice(0,room).forEach(f=>ui.photos.push({file:f,url:URL.createObjectURL(f)}));
+    if(fs.length>room) toast("Höchstens 12 Fotos auf einmal.");
+    e.target.value=""; ui.photoSent=false; ui.photoErr=false; render();
+  }
   if(k==="lesson-filter"){ui.lessonFilter=e.target.value;render()}
   if(k==="im-lesson"){ui.importLesson=e.target.value;render()}
   if(k==="perday"){S.perDay=+e.target.value;save();toast("Gespeichert")}
