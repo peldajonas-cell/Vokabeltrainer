@@ -2,14 +2,14 @@
 
 Englisch-Vokabeltrainer fürs iPad. Gelernt wird in 9 Lernmodi. Jeder Modus hat seine eigene Lernkartei mit 5 Fächern. Lernstand und Statistik liegen nur auf dem Gerät, auf dem gelernt wird. Es gibt keine Konten und es werden keine persönlichen Daten übertragen.
 
-**Adresse der App:** https://peldajonas-cell.github.io/Vokabeltrainer/
+**Adresse der App:** https://peldajonas-cell.github.io/vokabeltrainer-Paula/
 
 ---
 
 ## Einmalig einrichten
 
 ### 1. Website einschalten (GitHub, ca. 2 Minuten)
-1. In Safari github.com öffnen und das Repository **Vokabeltrainer** aufrufen.
+1. In Safari github.com öffnen und das Repository **vokabeltrainer-Paula** aufrufen.
 2. **Settings** öffnen. Auf dem iPad ggf. über „…“ oder nach rechts wischen.
 3. Links **Pages** wählen.
 4. Unter „Build and deployment“ bei **Source** „Deploy from a branch“ einstellen und bei **Branch** `main` und `/ (root)` wählen, dann **Save**.
