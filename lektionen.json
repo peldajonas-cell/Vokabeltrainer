@@ -1,0 +1,675 @@
+{
+ "version": 1,
+ "lessons": [
+  {
+   "id": "lighthouse-1-s-212-213",
+   "name": "Lighthouse 1 – S. 212–213",
+   "words": [
+    {
+     "id": "lighthouse-1-s-212-213--i-wasn-t",
+     "en": "I wasn't / I was not",
+     "de": "ich war nicht",
+     "sEn": "I wasn't at home yesterday.",
+     "sDe": "Ich war gestern nicht zu Hause."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--we-weren-t",
+     "en": "we weren't / we were not",
+     "de": "wir waren nicht",
+     "sEn": "We weren't tired after the trip.",
+     "sDe": "Wir waren nach der Reise nicht müde."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--capital",
+     "en": "capital / capital city",
+     "de": "die Hauptstadt",
+     "sEn": "London is the capital of England.",
+     "sDe": "London ist die Hauptstadt von England."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--mountain",
+     "en": "mountain",
+     "de": "der Berg",
+     "sEn": "We climbed a high mountain in Austria.",
+     "sDe": "Wir sind in Österreich auf einen hohen Berg gestiegen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--campsite",
+     "en": "campsite",
+     "de": "der Campingplatz",
+     "sEn": "Our campsite was next to a lake.",
+     "sDe": "Unser Campingplatz lag neben einem See."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--apartment",
+     "en": "apartment / flat",
+     "de": "die Wohnung",
+     "sEn": "My aunt lives in a small apartment.",
+     "sDe": "Meine Tante wohnt in einer kleinen Wohnung."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--a-bit",
+     "en": "a bit / a little",
+     "de": "ein bisschen, ein wenig",
+     "sEn": "I'm a bit nervous before the test.",
+     "sDe": "Ich bin vor dem Test ein bisschen nervös."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--mother",
+     "en": "mother",
+     "de": "die Mutter",
+     "sEn": "My mother works in a hospital.",
+     "sDe": "Meine Mutter arbeitet in einem Krankenhaus."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-stay",
+     "en": "to stay",
+     "de": "bleiben, übernachten",
+     "sEn": "Can I stay at your house tonight?",
+     "sDe": "Kann ich heute Nacht bei dir übernachten?"
+    },
+    {
+     "id": "lighthouse-1-s-212-213--ferry",
+     "en": "ferry",
+     "de": "die Fähre",
+     "sEn": "We took the ferry to the island.",
+     "sDe": "Wir haben die Fähre zur Insel genommen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--plane",
+     "en": "plane",
+     "de": "das Flugzeug",
+     "sEn": "The plane was two hours late.",
+     "sDe": "Das Flugzeug hatte zwei Stunden Verspätung."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-sunbathe",
+     "en": "to sunbathe",
+     "de": "sonnenbaden",
+     "sEn": "I don't like to sunbathe for hours.",
+     "sDe": "Ich mag es nicht, stundenlang sonnenzubaden."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--foot",
+     "en": "foot",
+     "de": "der Fuß",
+     "sEn": "My left foot hurts after the match.",
+     "sDe": "Mein linker Fuß tut nach dem Spiel weh."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--feet",
+     "en": "feet",
+     "de": "die Füße",
+     "sEn": "My feet are cold after the walk.",
+     "sDe": "Meine Füße sind nach dem Spaziergang kalt."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--hill",
+     "en": "hill",
+     "de": "der Hügel",
+     "sEn": "Our school is on a small hill.",
+     "sDe": "Unsere Schule liegt auf einem kleinen Hügel."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--caption",
+     "en": "caption",
+     "de": "die Bildunterschrift",
+     "sEn": "Read the caption under the photo.",
+     "sDe": "Lies die Bildunterschrift unter dem Foto."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-agree",
+     "en": "to agree",
+     "de": "zustimmen, einverstanden sein",
+     "sEn": "My friends don't always agree with me.",
+     "sDe": "Meine Freunde stimmen mir nicht immer zu."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--correct",
+     "en": "correct",
+     "de": "korrekt, richtig",
+     "sEn": "Is this answer correct?",
+     "sDe": "Ist diese Antwort korrekt?"
+    },
+    {
+     "id": "lighthouse-1-s-212-213--river",
+     "en": "river",
+     "de": "der Fluss",
+     "sEn": "The river is very wide here.",
+     "sDe": "Der Fluss ist hier sehr breit."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--by-the-river",
+     "en": "by the river",
+     "de": "am Fluss",
+     "sEn": "We had a picnic by the river.",
+     "sDe": "Wir haben am Fluss gepicknickt."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--exciting",
+     "en": "exciting",
+     "de": "aufregend",
+     "sEn": "The last minutes of the game were really exciting.",
+     "sDe": "Die letzten Minuten des Spiels waren richtig aufregend."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--scary",
+     "en": "scary",
+     "de": "unheimlich, gruselig",
+     "sEn": "This film is too scary for my little sister.",
+     "sDe": "Dieser Film ist zu gruselig für meine kleine Schwester."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--when",
+     "en": "when",
+     "de": "als (zeitlich), wann, wenn",
+     "sEn": "When I was eight, I learned to swim.",
+     "sDe": "Als ich acht war, habe ich schwimmen gelernt."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--ghost",
+     "en": "ghost",
+     "de": "der Geist, das Gespenst",
+     "sEn": "Some people say there is a ghost in the castle.",
+     "sDe": "Manche Leute sagen, dass es im Schloss ein Gespenst gibt."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--night",
+     "en": "night",
+     "de": "die Nacht",
+     "sEn": "I couldn't sleep last night.",
+     "sDe": "Ich konnte letzte Nacht nicht schlafen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--dark",
+     "en": "dark",
+     "de": "dunkel",
+     "sEn": "In winter it gets dark very early.",
+     "sDe": "Im Winter wird es sehr früh dunkel."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--vampire",
+     "en": "vampire",
+     "de": "der Vampir",
+     "sEn": "The vampire in the story only comes out at night.",
+     "sDe": "Der Vampir in der Geschichte kommt nur nachts heraus."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--costume",
+     "en": "costume",
+     "de": "das Kostüm, die Verkleidung",
+     "sEn": "What costume are you wearing at the party?",
+     "sDe": "Welches Kostüm trägst du auf der Party?"
+    },
+    {
+     "id": "lighthouse-1-s-212-213--underground",
+     "en": "underground",
+     "de": "unterirdisch, unter der Erde",
+     "sEn": "There is an underground car park next to the station.",
+     "sDe": "Neben dem Bahnhof gibt es ein unterirdisches Parkhaus."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--a-long-time-ago",
+     "en": "a long time ago",
+     "de": "vor langer Zeit",
+     "sEn": "A long time ago, people lived in caves.",
+     "sDe": "Vor langer Zeit lebten Menschen in Höhlen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-scream",
+     "en": "to scream",
+     "de": "schreien",
+     "sEn": "The kids scream on the roller coaster.",
+     "sDe": "Die Kinder schreien auf der Achterbahn."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--he-thought-that",
+     "en": "he thought that",
+     "de": "er dachte, dass",
+     "sEn": "He thought that the shop was open.",
+     "sDe": "Er dachte, dass der Laden geöffnet war."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-touch",
+     "en": "to touch",
+     "de": "anfassen, berühren",
+     "sEn": "Please don't touch my phone.",
+     "sDe": "Bitte fass mein Handy nicht an."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--out",
+     "en": "out",
+     "de": "heraus, hinaus, nach draußen",
+     "sEn": "The cat wants to go out.",
+     "sDe": "Die Katze will nach draußen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--past",
+     "en": "past",
+     "de": "vergangene(r, s)",
+     "sEn": "In the past few days it rained a lot.",
+     "sDe": "In den vergangenen Tagen hat es viel geregnet."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--blind",
+     "en": "blind",
+     "de": "blind",
+     "sEn": "Her grandfather is blind, so he has a guide dog.",
+     "sDe": "Ihr Großvater ist blind, deshalb hat er einen Blindenhund."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--capital-letter",
+     "en": "capital letter",
+     "de": "der Großbuchstabe",
+     "sEn": "Names start with a capital letter.",
+     "sDe": "Namen beginnen mit einem Großbuchstaben."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-agree-on",
+     "en": "to agree on",
+     "de": "sich einigen auf",
+     "sEn": "We couldn't agree on a film.",
+     "sDe": "Wir konnten uns nicht auf einen Film einigen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--to-correct",
+     "en": "to correct",
+     "de": "korrigieren",
+     "sEn": "The teacher will correct our tests this week.",
+     "sDe": "Die Lehrerin korrigiert diese Woche unsere Tests."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--boring",
+     "en": "boring",
+     "de": "langweilig",
+     "sEn": "The museum was boring at first.",
+     "sDe": "Das Museum war am Anfang langweilig."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--ghost-tour",
+     "en": "ghost tour",
+     "de": "die Geistertour",
+     "sEn": "We went on a ghost tour in Edinburgh.",
+     "sDe": "Wir haben in Edinburgh eine Geistertour gemacht."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--in-the-morning",
+     "en": "in the morning",
+     "de": "morgens, am Morgen",
+     "sEn": "I always have a shower in the morning.",
+     "sDe": "Ich dusche immer morgens."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--in-the-afternoon",
+     "en": "in the afternoon",
+     "de": "nachmittags, am Nachmittag",
+     "sEn": "We have football practice in the afternoon.",
+     "sDe": "Wir haben nachmittags Fußballtraining."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--in-the-evening",
+     "en": "in the evening",
+     "de": "abends, am Abend",
+     "sEn": "My parents watch the news in the evening.",
+     "sDe": "Meine Eltern schauen abends die Nachrichten."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--at-night",
+     "en": "at night",
+     "de": "nachts, in der Nacht",
+     "sEn": "Owls hunt at night.",
+     "sDe": "Eulen jagen nachts."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--on-monday",
+     "en": "on Monday",
+     "de": "am Montag",
+     "sEn": "We have a test on Monday.",
+     "sDe": "Wir schreiben am Montag einen Test."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--on-mondays",
+     "en": "on Mondays",
+     "de": "montags",
+     "sEn": "The library is closed on Mondays.",
+     "sDe": "Die Bücherei ist montags geschlossen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--darkness",
+     "en": "darkness",
+     "de": "die Dunkelheit",
+     "sEn": "The dog was afraid of the darkness.",
+     "sDe": "Der Hund hatte Angst vor der Dunkelheit."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--in-the-dark",
+     "en": "in the dark",
+     "de": "im Dunkeln",
+     "sEn": "I can't find my keys in the dark.",
+     "sDe": "Ich kann meine Schlüssel im Dunkeln nicht finden."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--the-underground",
+     "en": "the underground",
+     "de": "die U-Bahn",
+     "sEn": "We took the underground to the museum.",
+     "sDe": "Wir sind mit der U-Bahn zum Museum gefahren."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--ago",
+     "en": "ago",
+     "de": "vor (zeitlich)",
+     "sEn": "The film started ten minutes ago.",
+     "sDe": "Der Film hat vor zehn Minuten angefangen."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--that",
+     "en": "that",
+     "de": "das (dort), der/die/das, dass",
+     "sEn": "I think that we are late.",
+     "sDe": "Ich glaube, dass wir zu spät sind."
+    },
+    {
+     "id": "lighthouse-1-s-212-213--the-past",
+     "en": "the past",
+     "de": "die Vergangenheit",
+     "sEn": "In the past, there were no smartphones.",
+     "sDe": "In der Vergangenheit gab es keine Smartphones."
+    }
+   ]
+  },
+  {
+   "id": "lighthouse-1-s-214-215",
+   "name": "Lighthouse 1 – S. 214–215",
+   "words": [
+    {
+     "id": "lighthouse-1-s-214-215--through",
+     "en": "through",
+     "de": "durch",
+     "sEn": "The train goes through a long tunnel.",
+     "sDe": "Der Zug fährt durch einen langen Tunnel."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--mask",
+     "en": "mask",
+     "de": "die Maske",
+     "sEn": "He wore a mask at the party.",
+     "sDe": "Er trug auf der Party eine Maske."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--eye",
+     "en": "eye",
+     "de": "das Auge",
+     "sEn": "I have something in my eye.",
+     "sDe": "Ich habe etwas im Auge."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--experience",
+     "en": "experience",
+     "de": "die Erfahrung, das Erlebnis",
+     "sEn": "The school trip was a great experience.",
+     "sDe": "Die Klassenfahrt war ein tolles Erlebnis."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--transport",
+     "en": "transport",
+     "de": "das Fortbewegungsmittel, die Beförderung",
+     "sEn": "Public transport in our town is very good.",
+     "sDe": "Die öffentlichen Verkehrsmittel in unserer Stadt sind sehr gut."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-sound",
+     "en": "to sound",
+     "de": "klingen",
+     "sEn": "That doesn't sound like a good idea.",
+     "sDe": "Das klingt nicht nach einer guten Idee."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-relax",
+     "en": "to relax",
+     "de": "sich entspannen",
+     "sEn": "On Sundays I just want to relax.",
+     "sDe": "Sonntags möchte ich mich einfach entspannen."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-hope",
+     "en": "to hope",
+     "de": "hoffen",
+     "sEn": "I hope we win the game tomorrow.",
+     "sDe": "Ich hoffe, wir gewinnen morgen das Spiel."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--pride",
+     "en": "pride",
+     "de": "der Stolz",
+     "sEn": "He showed his medal with pride.",
+     "sDe": "Er zeigte seine Medaille voller Stolz."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--proud",
+     "en": "proud / proud of",
+     "de": "stolz (auf)",
+     "sEn": "I am proud of my little brother.",
+     "sDe": "Ich bin stolz auf meinen kleinen Bruder."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--event",
+     "en": "event",
+     "de": "das Ereignis",
+     "sEn": "The school concert is the biggest event of the year.",
+     "sDe": "Das Schulkonzert ist das größte Ereignis des Jahres."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--thousand",
+     "en": "thousand",
+     "de": "tausend",
+     "sEn": "About a thousand people came to the match.",
+     "sDe": "Ungefähr tausend Leute kamen zum Spiel."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--decoration",
+     "en": "decoration",
+     "de": "die Dekoration, der Schmuck",
+     "sEn": "We put up the decoration for the party.",
+     "sDe": "Wir haben die Dekoration für die Party aufgehängt."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--into",
+     "en": "into",
+     "de": "in ... (hinein)",
+     "sEn": "She ran into the room.",
+     "sDe": "Sie rannte ins Zimmer."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--arrival",
+     "en": "arrival",
+     "de": "die Ankunft",
+     "sEn": "Our arrival in London was at ten o'clock.",
+     "sDe": "Unsere Ankunft in London war um zehn Uhr."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--platform",
+     "en": "platform",
+     "de": "der Bahnsteig, das Gleis",
+     "sEn": "Our train leaves from platform 2.",
+     "sDe": "Unser Zug fährt von Gleis 2 ab."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--destination",
+     "en": "destination",
+     "de": "das Ziel, der Bestimmungsort",
+     "sEn": "Rome was the destination of our trip.",
+     "sDe": "Rom war das Ziel unserer Reise."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--single",
+     "en": "single",
+     "de": "Einzel-, einzeln",
+     "sEn": "I'd like a single ticket to Brighton, please.",
+     "sDe": "Ich hätte gern eine einfache Fahrkarte nach Brighton, bitte."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--return-ticket",
+     "en": "return ticket / return",
+     "de": "die (Hin- und) Rückfahrkarte",
+     "sEn": "A return ticket is cheaper than two single tickets.",
+     "sDe": "Eine Rückfahrkarte ist billiger als zwei einfache Fahrkarten."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--they-didn-t-go",
+     "en": "they didn't go / they did not go",
+     "de": "sie gingen nicht, sie sind nicht gegangen",
+     "sEn": "They didn't go to school because of the snow.",
+     "sDe": "Sie gingen wegen des Schnees nicht zur Schule."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--flag",
+     "en": "flag",
+     "de": "die Fahne, die Flagge",
+     "sEn": "The flag of Scotland is blue and white.",
+     "sDe": "Die Flagge Schottlands ist blau und weiß."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--not-anything",
+     "en": "not ... anything",
+     "de": "nichts",
+     "sEn": "I didn't eat anything for breakfast.",
+     "sDe": "Ich habe zum Frühstück nichts gegessen."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--rainbow",
+     "en": "rainbow",
+     "de": "der Regenbogen",
+     "sEn": "After the rain we saw a rainbow.",
+     "sDe": "Nach dem Regen sahen wir einen Regenbogen."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--even",
+     "en": "even",
+     "de": "sogar, selbst",
+     "sEn": "Even my dad laughed at the joke.",
+     "sDe": "Sogar mein Vater hat über den Witz gelacht."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--girlfriend",
+     "en": "girlfriend",
+     "de": "die (feste) Freundin",
+     "sEn": "His girlfriend plays in the same team.",
+     "sDe": "Seine Freundin spielt im selben Team."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--area",
+     "en": "area",
+     "de": "die Gegend, der Bereich",
+     "sEn": "There are a lot of farms in this area.",
+     "sDe": "In dieser Gegend gibt es viele Bauernhöfe."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--child",
+     "en": "child / kid",
+     "de": "das Kind",
+     "sEn": "Every child gets a free drink.",
+     "sDe": "Jedes Kind bekommt ein kostenloses Getränk."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--children",
+     "en": "children",
+     "de": "die Kinder",
+     "sEn": "The children are playing in the park.",
+     "sDe": "Die Kinder spielen im Park."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--concert",
+     "en": "concert",
+     "de": "das Konzert",
+     "sEn": "We went to a rock concert last weekend.",
+     "sDe": "Wir waren letztes Wochenende auf einem Rockkonzert."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--musician",
+     "en": "musician",
+     "de": "der Musiker, die Musikerin",
+     "sEn": "My uncle is a musician and plays the drums.",
+     "sDe": "Mein Onkel ist Musiker und spielt Schlagzeug."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--parade",
+     "en": "parade",
+     "de": "die Parade, der Umzug",
+     "sEn": "The parade goes through the whole town.",
+     "sDe": "Der Umzug geht durch die ganze Stadt."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--ten-thousand",
+     "en": "ten thousand",
+     "de": "zehntausend",
+     "sEn": "Ten thousand fans were in the stadium.",
+     "sDe": "Zehntausend Fans waren im Stadion."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-decorate",
+     "en": "to decorate",
+     "de": "dekorieren, schmücken",
+     "sEn": "Let's decorate the classroom for the party.",
+     "sDe": "Lass uns das Klassenzimmer für die Party schmücken."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-arrive",
+     "en": "to arrive",
+     "de": "ankommen",
+     "sEn": "When does the bus arrive?",
+     "sDe": "Wann kommt der Bus an?"
+    },
+    {
+     "id": "lighthouse-1-s-214-215--single-ticket",
+     "en": "single ticket / one-way ticket",
+     "de": "die einfache Fahrkarte",
+     "sEn": "A single ticket costs five pounds.",
+     "sDe": "Eine einfache Fahrkarte kostet fünf Pfund."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--to-return",
+     "en": "to return",
+     "de": "zurückkehren, zurückkommen",
+     "sEn": "We return home on Sunday.",
+     "sDe": "Wir kehren am Sonntag nach Hause zurück."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--i-went",
+     "en": "I went",
+     "de": "ich ging, ich bin gegangen",
+     "sEn": "I went to the cinema with my cousin.",
+     "sDe": "Ich bin mit meinem Cousin ins Kino gegangen."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--even-if",
+     "en": "even if",
+     "de": "selbst wenn",
+     "sEn": "I'll go out, even if it rains.",
+     "sDe": "Ich gehe raus, selbst wenn es regnet."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--not-even",
+     "en": "not even",
+     "de": "nicht einmal",
+     "sEn": "She did not even say hello.",
+     "sDe": "Sie hat nicht einmal Hallo gesagt."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--boyfriend",
+     "en": "boyfriend",
+     "de": "der (feste) Freund",
+     "sEn": "Her boyfriend lives in the next village.",
+     "sDe": "Ihr Freund wohnt im nächsten Dorf."
+    },
+    {
+     "id": "lighthouse-1-s-214-215--street-musician",
+     "en": "street musician",
+     "de": "der Straßenmusiker, die Straßenmusikerin",
+     "sEn": "A street musician played the guitar outside the station.",
+     "sDe": "Ein Straßenmusiker spielte vor dem Bahnhof Gitarre."
+    }
+   ]
+  }
+ ]
+}
